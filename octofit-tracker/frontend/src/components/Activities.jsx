@@ -6,7 +6,7 @@ function Activities() {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    fetchCollection('activities').then(setActivities).catch((loadError) => setError(loadError.message))
+    fetchCollection('/api/activities/').then(setActivities).catch((loadError) => setError(loadError.message))
   }, [])
 
   return <CollectionPage title="Activities" description="Recent movement across your OctoFit community." error={error}>
