@@ -20,7 +20,7 @@ app.use('/api/activities', activitiesRouter);
 app.use('/api/leaderboard', leaderboardRouter);
 app.use('/api/workouts', workoutsRouter);
 if (process.env.NODE_ENV !== 'test') {
-    app.listen(port, () => {
-        console.log(`OctoFit API listening on port ${port}`);
+    app.listen(port, '0.0.0.0', () => {
+        console.log(`OctoFit API listening on ${apiBaseUrl}`);
     });
 }
